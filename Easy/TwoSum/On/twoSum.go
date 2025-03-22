@@ -4,13 +4,7 @@ import (
 	"fmt"
 )
 
-func main() {
-	numbers := []int{3, 2, 4}
-	target := 6
-	fmt.Println(twoSum(numbers, target))
-}
-
-func twoSum(numbers []int, target int) []int {
+func twoSumOn(numbers []int, target int) []int {
 	m := make(map[int]int)
 	for i, num := range numbers {
 		complement := target - num
@@ -23,7 +17,7 @@ func twoSum(numbers []int, target int) []int {
 }
 
 // Собираем индексы, делаем lookup числа который дополнит текущую цифру до таргета
-func twoSumAlternate(numbers []int, target int) []int {
+func twoSumAlternateOn(numbers []int, target int) []int {
 	m := map[int]int{}
 	// Заполняем map
 	for i, v := range numbers {

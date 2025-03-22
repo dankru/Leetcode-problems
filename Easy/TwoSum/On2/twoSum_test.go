@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestTwoSumOn(t *testing.T) {
+func TestTwoSum(t *testing.T) {
 	// Arrange
 	testTable := []struct {
 		numbers  []int
@@ -26,7 +26,7 @@ func TestTwoSumOn(t *testing.T) {
 		{
 			numbers:  []int{0, 1, 2, 4, 4},
 			target:   4,
-			expected: [][]int{{0, 4}, {4, 0}, {0, 3}, {3, 0}},
+			expected: [][]int{{0, 3}, {3, 0}},
 		},
 		{
 			numbers:  []int{0, 1, 2, 3, 4},
@@ -36,7 +36,7 @@ func TestTwoSumOn(t *testing.T) {
 	}
 	// Act
 	for _, testCase := range testTable {
-		result := twoSumOn(testCase.numbers, testCase.target)
+		result := twoSum(testCase.numbers, testCase.target)
 
 		t.Logf("Calling twoSum(%v), result %d\n", testCase.numbers, result)
 
@@ -48,7 +48,7 @@ func TestTwoSumOn(t *testing.T) {
 
 }
 
-func TestTwoSumAlternateOn(t *testing.T) {
+func TestTwoSumAlternate(t *testing.T) {
 	// Arrange
 	testTable := []struct {
 		numbers  []int
@@ -68,7 +68,7 @@ func TestTwoSumAlternateOn(t *testing.T) {
 		{
 			numbers:  []int{0, 1, 2, 4, 4},
 			target:   4,
-			expected: [][]int{{0, 3}, {3, 0}, {0, 4}, {4, 0}},
+			expected: [][]int{{0, 3}, {3, 0}},
 		},
 		{
 			numbers:  []int{0, 1, 2, 3, 4},
@@ -78,7 +78,7 @@ func TestTwoSumAlternateOn(t *testing.T) {
 	}
 	// Act
 	for _, testCase := range testTable {
-		result := twoSumAlternateOn(testCase.numbers, testCase.target)
+		result := twoSumAlternate(testCase.numbers, testCase.target)
 
 		t.Logf("Calling twoSumAlternate(%v), result %d\n", testCase.numbers, result)
 
