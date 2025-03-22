@@ -27,7 +27,8 @@ func TestMax(t *testing.T) {
 
 		// Assert
 		assert.Equal(t, testCase.expected, result,
-			fmt.Sprintf("Incorrect result.  Expect %d, got %d", testCase.expected, result))
+			fmt.Sprintf("Incorrect result.  Expect %d, got %d", testCase.expected, result),
+		)
 	}
 }
 
