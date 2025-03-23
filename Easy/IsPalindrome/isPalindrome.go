@@ -24,6 +24,12 @@ func isPalindrome(x int32) bool {
 	return true
 }
 
-func isPalindromeBest() {
-
+func isPalindromeBest(x int32) bool {
+	y := x
+	var sum int32
+	for x > 0 {
+		sum = (sum * 10) + x%10
+		x /= 10
+	}
+	return sum == y
 }
